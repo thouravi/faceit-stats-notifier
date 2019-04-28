@@ -2,7 +2,7 @@ from win10toast import ToastNotifier
 import requests
 
 name = str(input("Enter FACEIT username:"))
-url = 'https://open.faceit.com/data/v4/players?nickname={0}&game=csgo&access_token=584bb8a8-8b74-4126-b7a8-d003d99f2d49'.format(name)
+url = 'https://open.faceit.com/data/v4/players?nickname={0}&game=csgo&access_token={token}'.format(name)
 r = requests.get(url).json()
 
 stats = {
